@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 特殊函数 异步编程解决方案 -->
+    <!-- 之前的异步编程 纯回调函数 -->
+    <script>
+        function * gen(){
+            // console.log("hello generator生成器");
+            // console.log('111');
+            yield 'aaaaaa'
+            // console.log('222');
+            yield 'bbbbbb'
+            // console.log('333');
+            yield 'cccccc'
+            // console.log('444');
+            yield 'dddddd'
+        }
+
+        let iterator = gen();
+        // 必须调用next方法才会执行 生成器函数
+        console.log(iterator.next());
+        console.log(iterator.next());
+        console.log(iterator.next());
+        console.log(iterator.next());
+        console.log(iterator.next());
+
+        // for (v of iterator) {
+        //     console.log(v);
+        // }
+    </script>
+</body>
+</html>

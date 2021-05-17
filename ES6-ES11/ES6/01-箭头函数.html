@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let fn = (a,b) => {
+        //     return a+b;
+        // }
+        // 1 this是静态的  箭头函数 this 指向声明时所在作用域下 this 的值
+        function getName() {
+            console.log(this.name);
+        }
+        let getName2 = () => {
+            // 不管如何调用 箭头函数中的this指向 当前作用域下this的值
+            console.log(this.name);
+        }
+
+        window.name = "zzy"
+        const school = {
+            name: "ABC"
+        }
+
+        // 直接调用
+        // getName()
+        // getName2()
+
+        // call方法调用
+        // getName.call(school)
+        // getName2.call(school)
+
+        // 2 不能作为构造实例化对象
+        // let Person = (name, age) => {
+        //     this.name = name;
+        //     this.age = age;
+        // }
+        // 构造函数 实例化对象
+        // let me = new Person('xiao',30)
+        // console.log(me);
+
+        // 3 不能使用 arguments 变量
+        // let fn = () => {
+        //     console.log(arguments);
+        // }
+        // fn(1,2,3)
+
+        // 4 
+    </script>
+</body>
+</html>
